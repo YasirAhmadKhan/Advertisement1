@@ -1,0 +1,27 @@
+<h1>Book Details</h1>
+<table>
+<thead>
+<th>Title</th>
+<th>Author Name</th>
+<th>Subject Code</th>
+<th>Image</th>
+</thead>
+<%@book.each_with_index do |book,i|%>
+<tr>
+<td><%=i%></td>
+<td><%=book.title%></td>
+<td><%=book.author_name%></td>
+<td><%=book.subject_code%></td>
+<td><%=book.image%></td>
+<td>
+<%= link_to "Edit",book_edit_path(book)%>|
+<%= link_to "Delete Book",book_destroy_path(book), method: :delete%>|
+<%= link_to "Show Book Details",book_show_path(book)%>|
+</td>
+</tr>
+</table><br>
+
+<%end%>
+<div>
+<%=link_to "Back",book_index_path%>
+</div>

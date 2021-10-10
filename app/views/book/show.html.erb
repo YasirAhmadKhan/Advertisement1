@@ -1,0 +1,23 @@
+<h1>Book </h1>
+<div>
+<label>Title: </label>
+<%=@book.title%>
+</div>
+
+<div>
+<label>Author: </label>
+<%=@book.author_name%>
+</div>
+
+<div>
+<label>Subject Code: </label>
+<%=@book.subject_code%>
+</div>
+
+<div>
+<label>Image: </label>
+<%=image_tag @book.image.url%>
+</div>
+<div>
+<%=link_to "Home",book_index_path%>
+</div>
